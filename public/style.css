@@ -56,6 +56,21 @@ body{
     background-color: #d67301;
 }
 
+.delete{
+background-color: lightgray;
+}
+.edit{
+background-color: var(--secondary-color);
+}
+
+.delete:hover{
+background-color: rgb(185, 60, 60);
+}
+
+.edit:hover{
+background-color: #04a7bd;
+}
+
 /* HEADER */
 
 header, footer{
