@@ -4,16 +4,30 @@ module.exports= {
     create(data) {
 
         const query =`
-            INSERT INTO instructors (
+            INSERT INTO products (
+                category_id,
+                user_id,
                 name,
-            ) VALUES ($1, $2, $3, $4, $5, $6)
+                description,
+                old_price,
+                price,
+                quantity,
+                status
+            ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
             RETURNING id
         `
     
         const values = [
+            data.category_id,
+            2,
             data.name,
+            data.description,
+            data.old_price,
+            data.price,
+            data.quantity,
+            data.status
         ]
 
-        db.query(query, values)
+        return db.query(query, values)
     },
 }
