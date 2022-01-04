@@ -46,6 +46,7 @@
                 value="{{ product.price }}"
                 onkeydown= "Mask.apply(this, 'formatBRL')"
             >
+            
         </div>
     {% if product.old_price %}
         <input type="hidden" name="old_price" value={{product.old_price}}>
@@ -65,7 +66,7 @@
 </div>
 
 
-{% if product.status %}
+{% if (product.status == '1') or (product.status == '0')%}
 <div class="item">
         <div>Disponivel ?</div>
         <div>
