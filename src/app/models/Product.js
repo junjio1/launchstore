@@ -19,7 +19,7 @@ module.exports= {
     
         const values = [
             data.category_id,
-            2,
+            data.user_id,
             data.name,
             data.description,
             data.old_price,
