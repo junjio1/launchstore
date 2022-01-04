@@ -45,6 +45,7 @@ async edit(req, res){
     results = await Category.all()
     const categories = results.rows
 
+
     return res.render("products/edit.njk", { product, categories } )
 },
 
