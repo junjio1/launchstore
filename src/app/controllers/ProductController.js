@@ -30,7 +30,7 @@ async post(req, res){
     let results = await Product.create(req.body)
     const productId = results.rows[0].id
 
-    return res.redirect(`products/${productId}`)
+    return res.redirect(`products/${productId}/edit`)
 },
 async edit(req, res){
 
