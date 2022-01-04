@@ -7,11 +7,13 @@
     <form  method="POST" action="/products?_method=PUT">
 
         <div class="header">
-            <h3>Editar Produto {{productId}}</h3>
+            <h3>Editar Produto {{product.id}}</h3>
         </div>
 
         <div class="fields">
+
             {% include 'products/fields.njk' %}
+            
             <input
                 type="hidden"
                 name="id"
@@ -22,11 +24,12 @@
         <button class="button edit" type="submit">Atualizar</button>
     </form>
 
-    <form id="form-delete" action="products?_method=DELETE" method="post">
+    <form id="form-delete" action="/products?_method=DELETE" method="post">
         <input type="hidden" name="id" value={{product.id}}>
         <button class="button delete"  type="submit">Deletar</button>
     </form>
 </section>
+
 
 
 {% endblock content %}

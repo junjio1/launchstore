@@ -1,0 +1,41 @@
+[33mcommit c8e98f56a01cfba9adf0283691fcc10269143598[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Junji Oshiro <junjio1@hotmail.com>
+Date:   Tue Jan 4 11:45:29 2022 -0300
+
+    fixed res.redirect on ProductController post
+
+[33mcommit 34c4f45e56235c26dd3d5eaecf902d2aced0c954[m
+Author: Junji Oshiro <junjio1@hotmail.com>
+Date:   Tue Jan 4 11:26:20 2022 -0300
+
+    adde css on delete and edit button , background color and hover
+
+[33mcommit f1c2550432c9ea103bf94f66243a75d8a2e9e90a[m
+Author: Junji Oshiro <junjio1@hotmail.com>
+Date:   Tue Jan 4 11:20:08 2022 -0300
+
+    created edit on routes , ProductController.js, added on utils.js format price logic , created db find query on Product
+
+[33mcommit 032f61818a82e3f1747b9fd2cac8c5a39139e4c0[m
+Author: Junji Oshiro <junjio1@hotmail.com>
+Date:   Tue Jan 4 10:41:08 2022 -0300
+
+    created const Mask
+
+[33mcommit 05b1d1decb8c149cd21cddcad80e424d6f0733f2[m
+Author: Junji Oshiro <junjio1@hotmail.com>
+Date:   Tue Jan 4 09:30:01 2022 -0300
+
+    currency format on input price
+
+[33mcommit c4cff70e0e4798a9912a07e937659790871f4d8b[m
+Author: Junji Oshiro <junjio1@hotmail.com>
+Date:   Tue Jan 4 05:38:40 2022 -0300
+
+    products.js created
+
+[33mcommit 52008dfe92d1e18bea429cede27b374b64b1a7b0[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: Junji Oshiro <junjio1@hotmail.com>
+Date:   Tue Jan 4 01:35:42 2022 -0300
+
+    adding files

@@ -33,7 +33,7 @@ async post(req, res){
     return res.redirect(`products/${productId}/edit`)
 },
 async edit(req, res){
-
+ 
     let results = await Product.find(req.params.id)
     const product = results.rows[0]
 
@@ -68,5 +68,11 @@ async put (req, res){
     await Product.update(req.body)
 
     res.redirect(`/products/${req.body.id}/edit`)
+},
+async delete(req, res){
+
+    await Product.delete(req.body.id)
+
+    return res.redirect(`/products/create`)
 }
 }
