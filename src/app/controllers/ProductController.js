@@ -27,6 +27,12 @@ async post(req, res){
         }
     }
 
+    if (req.files.length == 0){
+        return res.send("Please , send at least one image")
+    }
+
+
+
     let results = await Product.create(req.body)
     const productId = results.rows[0].id
 
