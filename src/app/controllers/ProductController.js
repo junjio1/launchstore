@@ -3,6 +3,7 @@ const { formatPrice } = require("../../lib/utils")
 const Category = require("../models/Category")
 const Product =  require("../models/Product")
 const File =  require("../models/File")
+const { array } = require("../middlewares/multer")
 
 module.exports = {
 
@@ -41,8 +42,15 @@ async post(req, res){
 
     return res.redirect(`products/${productId}/edit`)
 },
-show(req, res){
-    return res.render("products/show.njk")
+async show(req, res){
+
+    let results = await Product.find(req.params.id)
+    const product = results.rows[0]
+
+    if(!product) return res.send("Product not found")
+
+
+    return res.render("products/show.njk",{product})
 },
 async edit(req, res){
  
