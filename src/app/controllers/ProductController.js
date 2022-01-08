@@ -61,8 +61,16 @@ async show(req, res){
     product.oldPrice = formatPrice(product.old_price)
     product.price = formatPrice(product.price)
 
-    console.log(product)
-    return res.render("products/show.njk",{product})
+    results = await Product.files(product.id)
+    let files = results.rows
+    files = files.map(file =>({
+        ...file,
+        src:`${req.protocol}://${req.headers.host}${file.path.replace("public", "")}`
+    }))
+
+    console.log(files)
+
+    return res.render("products/show.njk",{product , files })
 },
 async edit(req, res){
  
