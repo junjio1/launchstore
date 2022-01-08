@@ -75,7 +75,13 @@ async put (req, res){
         }
     }
 
- 
+    
+    if (req.body.length != 0){
+        const newFilesPromise = req.files.map(file => 
+            File.create({...file, product_id: req.body.id}))
+
+        await Promise.all(newFilesPromise)    
+    }
 
     if(req.body.removed_files){
         const removedFiles = req.body.removed_files.split(",") // [1,2,3,]
