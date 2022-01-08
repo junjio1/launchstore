@@ -75,6 +75,8 @@ async put (req, res){
         }
     }
 
+ 
+
     if(req.body.removed_files){
         const removedFiles = req.body.removed_files.split(",") // [1,2,3,]
         const lastIndex = removedFiles.length -1
