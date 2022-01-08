@@ -41,6 +41,9 @@ async post(req, res){
 
     return res.redirect(`products/${productId}/edit`)
 },
+show(req, res){
+    return res.render("products/show.njk")
+},
 async edit(req, res){
  
     let results = await Product.find(req.params.id)
