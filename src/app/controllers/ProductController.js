@@ -47,7 +47,7 @@ async show(req, res){
     let results = await Product.find(req.params.id)
     const product = results.rows[0]
 
-    console.log(product)
+    
 
     if(!product) return res.send("Product not found")
 
@@ -125,7 +125,7 @@ async put (req, res){
 
     await Product.update(req.body)
 
-    res.redirect(`/products/${req.body.id}/edit`)
+    res.redirect(`/products/${req.body.id}`)
 },
 async delete(req, res){
 
