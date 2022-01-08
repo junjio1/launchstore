@@ -29,7 +29,6 @@ async delete(id){
 
         fs.unlinkSync(file.path)
        
-
         return db.query(`DELETE FROM files WHERE id = $1`, [id])
         
     }catch(err){
