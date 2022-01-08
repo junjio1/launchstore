@@ -68,7 +68,7 @@ async show(req, res){
         src:`${req.protocol}://${req.headers.host}${file.path.replace("public", "")}`
     }))
 
-    console.log(files)
+    
 
     return res.render("products/show.njk",{product , files })
 },
